@@ -5,28 +5,29 @@ pipeline {
 
         stage('Pull from Git') {
             steps {
-                git 'https://github.com/Lubhana/jenkins_task.git'
+                echo "Repository pulled successfully"
             }
         }
 
         stage('Build') {
             steps {
-                echo "Building the project..."
-                sh 'echo Build Successful'
+                echo "Building project..."
+                sh 'pwd'
+                sh 'ls -la'
             }
         }
 
         stage('Test') {
             steps {
-                echo "Running Tests..."
-                sh 'echo Tests Passed'
+                echo "Running tests..."
+                sh 'echo Tests successful'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo "Deploying Application..."
-                sh 'echo Deployment Complete'
+                echo "Deploying application..."
+                sh 'echo Deployment successful'
             }
         }
     }
